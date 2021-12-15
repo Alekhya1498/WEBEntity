@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SalesModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Sale">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="ProductName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ProductPrice" Type="Int32" />
+    <Property Name="SaleItemName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SaleItemPrice" Type="Int32" />
+    <Property Name="Quantity" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="SalesEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Sales" EntityType="Self.Sale" />
+  </EntityContainer>
+</Schema>
